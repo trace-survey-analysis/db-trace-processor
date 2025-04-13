@@ -20,7 +20,7 @@ CREATE TABLE IF NOT EXISTS api.health_checks (
 -- Create instructors table
 CREATE TABLE IF NOT EXISTS api.instructors (
     instructor_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-    user_id UUID NOT NULL UNIQUE,
+    user_id UUID NOT NULL,
     name VARCHAR(255) NOT NULL,
     date_created TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     CONSTRAINT fk_user FOREIGN KEY (user_id) REFERENCES api.users(user_id) ON DELETE CASCADE
