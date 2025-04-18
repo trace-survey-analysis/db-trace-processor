@@ -1,7 +1,7 @@
 CREATE SCHEMA IF NOT EXISTS vectors;
 
 -- Enable pgvector extension
-CREATE EXTENSION IF NOT EXISTS vector;
+CREATE EXTENSION vector WITH SCHEMA public;
 
 -- Create embedding tables in trace schema
 CREATE TABLE IF NOT EXISTS vectors.comment_embeddings (
